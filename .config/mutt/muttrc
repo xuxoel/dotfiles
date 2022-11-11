@@ -1,0 +1,9 @@
+# vim: filetype=neomuttrc
+source /usr/local/share/mutt-wizard/mutt-wizard.muttrc
+source /home/jcm/.config/mutt/accounts/jesus.carreja@yahoo.com.muttrc
+source /home/jcm/.config/mutt/gruvbox/colors-gruvbox.muttrc
+source /home/jcm/.config/mutt/gruvbox/colors-gruvbox-extended.muttrc
+
+set editor="/usr/bin/nvim"
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/jcm/.config/mutt/accounts/jesus.carreja@yahoo.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to jesus.carreja@yahoo.com"
+macro index,pager i2 '<sync-mailbox><enter-command>source /home/jcm/.config/mutt/accounts/carreja645@gmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to carreja645@gmail.com"
