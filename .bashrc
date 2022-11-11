@@ -8,7 +8,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 alias config='/usr/bin/git --git-dir=/home/jcm/.dotfiles --work-tree=/home/jcm'
-alias v='~/.config/vifm/vifmrun'
+alias v='~/.config/vifm/scripts/vifmrun'
 alias ytv="youtube-dl --add-metadata -i -o '%(upload_date)s-%(title)s.%(ext)s'"
 alias ytvs="youtube-dl --add-metadata -i --write-srt -o '%(upload_date)s-%(title)s.%(ext)s'"
 alias yta="ytv -x -f bestaudio/best"
