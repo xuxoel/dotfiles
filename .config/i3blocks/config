@@ -1,0 +1,75 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# The following keys are standard 
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+#
+# The following keys are specific to i3blocks
+# command
+# interval
+# signal
+# label
+# format
+#
+#
+# Global properties
+separator_block_width=15
+command=~/.scripts/$BLOCK_NAME
+
+[i3blocks-mpd]
+command=~/.scripts/i3blocks-mpd.sh
+align=left
+interval=5
+
+[i3blocks-moonphase]
+command=~/.scripts/i3blocks-moonphase.sh
+interval=once
+
+[i3blocks-forecast]
+command=~/.scripts/i3block-forecast.sh
+interval=once
+
+[i3blocks-cpu]
+command=~/.scripts/i3blocks-cpu.sh
+interval=3
+
+#[i3blocks-mailbox]
+#command=~/.scripts/i3blocks-mailbox.sh
+#interval=5
+
+[i3blocks-internet]
+command=~/.scripts/i3blocks-internet.sh
+interval=10
+
+[i3blocks-volume]
+command=~/.scripts/i3blocks-volume.sh
+interval=5
+#LABEL=VOL
+
+[i3blocks-battery]
+command=~/.scripts/i3blocks-battery.sh
+interval=30
+#LABEL=BAT
+#LABEL=⚡
+#BAT_NUMBER=0
+#
+# Update time every 5 seconds
+[time]
+command=date '+%Y-%m-%d %H:%M' 
+interval=5
