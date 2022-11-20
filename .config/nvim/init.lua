@@ -1,7 +1,0 @@
-require 'settings'
-require 'keymaps'
-require 'plugins'
-require 'lsp'
-require 'plugins/lualine'
-require 'plugins/cmp'
-require 'plugins/colorizer'
