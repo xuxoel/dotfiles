@@ -1,6 +1,11 @@
 #!/bin/sh
 
-BRIGHT=`cat brightness.txt`
+if [[ ! -e /tmp/brightness ]]; then
+    touch /tmp/brightness
+    echo 1.0 > /tmp/brightness
+fi
+
+BRIGHT=`cat /tmp/brightness`
 
 if [ "$1" = '+' ]; then
     NEWBRIGHT=$(echo "$BRIGHT + 0.05" | bc)
@@ -13,7 +18,7 @@ elif [ "$1" = '-' ]; then
         NEWBRIGHT='0.0'
     fi
 fi
-echo $NEWBRIGHT > brightness.txt
+echo $NEWBRIGHT > /tmp/brightness
 
 DISP=$(xrandr -q | grep ' connected' | head -n 1 | cut -d ' ' -f1)
 xrandr --output $DISP --brightness $NEWBRIGHT
