@@ -4,6 +4,13 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export LOCATION="Viveiro"
+export TERMINAL="st"
+export EDITOR="nvim"
+
+export XDG_CACHE_HOME="$HOME/.cache"
+
+
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
